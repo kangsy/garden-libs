@@ -1,0 +1,26 @@
+# garden-purecss
+
+I wanted to use some CSS frameworks within my clojure projects with [[https://github.com/noprompt/garden]]
+
+Currently, I have converted [[https://purecss.io/][Pure CSS]] and [[http://bulma.io/][Bulma]].
+As it stands now, these are conversions of the static css files and far inferior to the sass-version if it comes to customzation. So please use this with care.
+
+## Usage
+
+Just require the namespace and define your style like this:
+
+#+BEGIN_SRC clojure
+(ns my-css.core
+  (:require [garden.def :refer [defstyles]]
+            [garden-libs.bulma.v0-3-1 :as bulma]))
+
+(defstyles mycss [ ... ])
+(defstyles all [bulma mycss])
+#+END_SRC
+
+## License
+
+Copyright © 2017 Kang Research & Development GmbH, Hamburg, Germany
+
+Distributed under the Eclipse Public License either version 1.0 or (at
+your option) any later version.
